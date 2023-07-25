@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/Calculator_Page.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,37 +16,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const CalculatorPage(title: "Flutter Caclulator"),
-    );
-  }
-}
-
-class CalculatorPage extends StatefulWidget {
-  final String title;
-  const CalculatorPage({super.key, required this.title});
-
-  @override
-  State<CalculatorPage> createState() => _CalculatorPageState();
-}
-
-class _CalculatorPageState extends State<CalculatorPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            alignment: Alignment.centerRight,
-            padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
-            child: const Text("0", style: TextStyle(
-              fontSize: 48.0,
-              fontWeight: FontWeight.bold
-            ),
-            ),
-          )
-        ]),
     );
   }
 }
