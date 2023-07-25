@@ -30,10 +30,35 @@ class _CalculatorPageState extends State<CalculatorPage> {
       _output = "0";
     } else if (btnTxt == ".") {
       if (_output.contains(".")) {
-        // ignore: avoid_print
-        print(output); //27:19
+        print("Already contains a decimal");
+      } else {
+        _output = _output + btnTxt;
       }
+    } else if (btnTxt == "=") {
+      num2 = double.parse(output);
+      if (operand == "+") {
+        _output = (num1 + num2).toString();
+      } else if (operand == "-") {
+        _output = (num1 - num2).toString();
+      } else if (operand == "*") {
+        _output = (num1 * num2).toString();
+      } else if (operand == "/") {
+        if (num1 == 0) {
+          print("Division Error");
+        } else {
+          _output = (num1 / num2).toString();
+        }
+      }
+      num1 = 0;
+      num2 = 0;
+      operand = "";
+    } else {
+      _output = _output + btnTxt;
     }
+
+    setState(() {
+      output = double.parse(_output).toStringAsFixed(2);
+    });
   }
 
   Widget buildButton(String btnText) {
