@@ -1,2 +1,3 @@
 <h1><b>Flutter Calculator</b></h1>
-<img src="![Flutter Calculator](https://github.com/VishwasPrabhu18/Flutter-Calculator/assets/125431497/b9d899c9-f525-428d-beef-86da6b6af2f2)" alt="App Image" />
+<h3 style="font-style: italic">Screen Shot</h3>
+![Flutter Calculator](https://github.com/VishwasPrabhu18/Flutter-Calculator/assets/125431497/dae81d19-a300-4bd7-b8a2-08b40e3b1abb)
